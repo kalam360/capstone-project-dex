@@ -2,7 +2,15 @@
 
 In this project we will develop smartcontracts for liquidity mining on Uniswap, balancer, Curve, and others with various strategies that yields better return. Our goal is to optimize the strategies. 
 
+## Steps:
+    1. Get Current rate and APY for each currency pair from DEX exchanges
+    2. Develop a weight matrix for risk and return characteristics of these liquidity 
+    3. With given weight stake currencies in these pools to have return
+    4. Check in regular interval about the risk return changes
+    5. Update the weight matrix and rebalance the stake in pools
+    
 
+## Common Commands
 ```shell
 npx hardhat accounts
 npx hardhat compile
@@ -21,7 +29,6 @@ npx prettier '**/*.{json,sol,md}' --write
 npx solhint 'contracts/**/*.sol'
 npx solhint 'contracts/**/*.sol' --fix
 ```
-
 
 ```shell
 hardhat run --network ropsten scripts/deploy.js
